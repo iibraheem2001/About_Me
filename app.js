@@ -43,7 +43,18 @@ if (howOld == 'yes'){
     
     alert('Wrong, I just turned 20 this month');
 }
-console.log(
-    
-    
-    )
+let userAnswer = parseInt(prompt("Guess a number between 1 and 20"));
+let correctAnswer = 11
+let numberOfAttempts = 4;
+for(let i = 1; i <= numberOfAttempts; i++){
+    if(userAnswer > correctAnswer){
+       userAnswer = parseInt(prompt("Answer is too high, try again"))
+
+    } else if(userAnswer < correctAnswer){
+      userAnswer = parseInt(prompt("Answer is too low, try again"))
+
+    } else if(userAnswer == correctAnswer){
+        alert("You got the right number!");
+        break
+    }
+}
